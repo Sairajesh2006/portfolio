@@ -94,13 +94,13 @@ export const PhotoUploadModal: React.FC<PhotoUploadModalProps> = ({
         {/* Current Preview */}
         <div className="my-5 flex flex-col sm:flex-row items-center gap-5 p-4 bg-slate-900/60 border border-slate-800/80 rounded-xl">
           <div className="relative w-24 h-24 rounded-2xl overflow-hidden border-2 border-blue-500/40 shadow-lg shadow-blue-500/10 shrink-0 bg-slate-950 flex items-center justify-center">
-            {previewUrl && previewUrl !== '/profile.jpg' ? (
+            {previewUrl ? (
               <img
                 src={previewUrl}
                 alt="Rajesh Preview"
                 className="w-full h-full object-cover"
                 onError={() => {
-                  setPreviewUrl('/profile.jpg');
+                  setPreviewUrl('');
                 }}
               />
             ) : (

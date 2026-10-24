@@ -93,13 +93,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <div className="relative w-full h-full bg-[#0a0f1d] border-2 border-blue-500/30 rounded-3xl overflow-hidden shadow-2xl flex flex-col">
                 {/* Photo container */}
                 <div className="relative w-full flex-1 bg-gradient-to-b from-slate-900 to-[#070b14] overflow-hidden flex items-center justify-center">
-                  {!imgError && currentPhoto && currentPhoto !== '/profile.jpg' ? (
+                  {!imgError && currentPhoto ? (
                     <img
                       src={currentPhoto}
                       alt="Amrutapu Sai Rajesh"
                       referrerPolicy="no-referrer"
                       onError={() => setImgError(true)}
-                      className="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105"
+                      className="w-full h-full object-cover object-center transition duration-500 group-hover:scale-105"
                     />
                   ) : (
                     /* Elegant monogram portrait placeholder when photo file is not yet placed in /public/ */
